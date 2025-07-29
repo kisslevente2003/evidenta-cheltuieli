@@ -1,0 +1,160 @@
+====================================
+  EVIDENȚA CHELTUIELILOR
+  Link-uri de Descărcare Oficiale
+====================================
+
+🔗 REPOSITORY PRINCIPAL:
+https://github.com/kisslevente2003/evidenta-cheltuieli
+
+====================================
+📥 DESCĂRCARE DIRECTĂ
+====================================
+
+💻 Cod Sursă Complet:
+https://github.com/kisslevente2003/evidenta-cheltuieli/archive/refs/heads/main.zip
+
+📦 Release-uri Stabile:
+https://github.com/kisslevente2003/evidenta-cheltuieli/releases
+
+🏷️ Ultima Versiune (v1.0.0):
+https://github.com/kisslevente2003/evidenta-cheltuieli/releases/tag/v1.0.0
+
+====================================
+🛠️ CLONE CU GIT
+====================================
+
+📋 HTTPS:
+git clone https://github.com/kisslevente2003/evidenta-cheltuieli.git
+
+🔐 SSH:
+git clone git@github.com:kisslevente2003/evidenta-cheltuieli.git
+
+🌍 GitHub CLI:
+gh repo clone kisslevente2003/evidenta-cheltuieli
+
+====================================
+📖 DOCUMENTAȚIE
+====================================
+
+📚 README Principal:
+https://github.com/kisslevente2003/evidenta-cheltuieli#readme
+
+📋 Wiki:
+https://github.com/kisslevente2003/evidenta-cheltuieli/wiki
+
+🎯 Issues (Support):
+https://github.com/kisslevente2003/evidenta-cheltuieli/issues
+
+💬 Discussions:
+https://github.com/kisslevente2003/evidenta-cheltuieli/discussions
+
+====================================
+🔄 ISTORIC SCHIMBĂRI
+====================================
+
+📝 Changelog:
+https://github.com/kisslevente2003/evidenta-cheltuieli/blob/main/CHANGELOG.md
+
+🏷️ Toate Release-urile:
+https://github.com/kisslevente2003/evidenta-cheltuieli/releases
+
+🌳 Network Graph:
+https://github.com/kisslevente2003/evidenta-cheltuieli/network
+
+====================================
+👨‍💻 DEZVOLTATOR
+====================================
+
+🧑 Profil GitHub:
+https://github.com/kisslevente2003
+
+📧 Contact Issues:
+https://github.com/kisslevente2003/evidenta-cheltuieli/issues/new
+
+🤝 Contribuții:
+https://github.com/kisslevente2003/evidenta-cheltuieli/pulls
+
+====================================
+🌟 ALTERNATIVE DE DESCĂRCARE
+====================================
+
+📁 ZIP Direct din Browser:
+1. Mergi la: https://github.com/kisslevente2003/evidenta-cheltuieli
+2. Click pe butonul verde "Code"
+3. Select "Download ZIP"
+
+📱 GitHub Mobile App:
+1. Căută "kisslevente2003/evidenta-cheltuieli"
+2. Clone sau download direct din app
+
+💻 GitHub Desktop:
+1. File → Clone Repository
+2. URL: kisslevente2003/evidenta-cheltuieli
+
+====================================
+🔒 VERIFICARE INTEGRITATE
+====================================
+
+📊 Status Build:
+https://github.com/kisslevente2003/evidenta-cheltuieli/actions
+
+🔍 Code Quality:
+- Toate fișierele sunt scannate pentru vulnerabilități
+- TypeScript oferă verificare de tipuri
+- ESLint verifică calitatea codului
+
+🛡️ Securitate:
+- Nu conține malware
+- Nu colectează date personale  
+- Rulează 100% local
+
+====================================
+📅 INFORMAȚII VERSION
+====================================
+
+🏷️ Versiunea Curentă: 1.0.0
+📅 Data Release: Ianuarie 2025
+📈 Status: Stabil
+🔄 Frecvența Update-uri: Lunară
+
+====================================
+🆘 SUPPORT ȘI AJUTOR
+====================================
+
+❓ În caz de probleme:
+
+1️⃣ Verifică documentația:
+   https://github.com/kisslevente2003/evidenta-cheltuieli/blob/main/README.md
+
+2️⃣ Caută în Issues existente:
+   https://github.com/kisslevente2003/evidenta-cheltuieli/issues
+
+3️⃣ Creează Issue nou:
+   https://github.com/kisslevente2003/evidenta-cheltuieli/issues/new
+
+4️⃣ Discuții comunitate:
+   https://github.com/kisslevente2003/evidenta-cheltuieli/discussions
+
+====================================
+⚖️ LICENȚA
+====================================
+
+📄 Licența MIT:
+https://github.com/kisslevente2003/evidenta-cheltuieli/blob/main/LICENSE
+
+✅ Permisiuni:
+- Folosire comercială
+- Modificare
+- Distribuire
+- Folosire privată
+
+❌ Limitări:
+- Fără garanție
+- Fără responsabilitate
+
+====================================
+
+Ultima actualizare: Ianuarie 2025
+Verificat de: kisslevente2003
+
+🌟 Succes cu instalarea! 🌟

@@ -1,0 +1,247 @@
+====================================
+   EVIDENȚA CHELTUIELILOR
+   Ghid Complet de Instalare
+====================================
+
+📋 CUPRINS:
+1. Cerințe de sistem
+2. Instalare Node.js
+3. Descărcarea proiectului
+4. Instalare dependințe
+5. Configurare bază de date
+6. Pornirea aplicației
+7. Depanare probleme
+8. Comandi utile
+
+====================================
+1. CERINȚE DE SISTEM
+====================================
+
+Pentru a rula această aplicație ai nevoie de:
+
+✅ Sistem de operare:
+   - Windows 10/11
+   - macOS 10.15+
+   - Linux (Ubuntu 18.04+, Debian 10+, etc.)
+
+✅ Software necesar:
+   - Node.js versiunea 18.0 sau mai nouă
+   - npm (vine cu Node.js)
+   - Git (opțional, pentru clonare repository)
+
+✅ Hardware minim:
+   - 4 GB RAM
+   - 500 MB spațiu liber pe disk
+   - Procesor dual-core
+
+====================================
+2. INSTALARE NODE.JS
+====================================
+
+🪟 WINDOWS:
+1. Mergi la https://nodejs.org/
+2. Descarcă versiunea LTS (Long Term Support)
+3. Rulează installer-ul .msi
+4. Urmează instrucțiunile (acceptă toate setările default)
+5. Restart calculatorul
+
+🍎 macOS:
+Opțiunea 1 (Recommandată - cu Homebrew):
+1. Instalează Homebrew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2. Instalează Node.js: brew install node
+
+Opțiunea 2 (Direct):
+1. Mergi la https://nodejs.org/
+2. Descarcă installer-ul pentru macOS
+3. Rulează fișierul .pkg
+
+🐧 LINUX:
+Ubuntu/Debian:
+sudo apt update
+sudo apt install nodejs npm
+
+CentOS/RHEL/Fedora:
+sudo dnf install nodejs npm
+
+Arch Linux:
+sudo pacman -S nodejs npm
+
+====================================
+3. VERIFICARE INSTALARE
+====================================
+
+Deschide Terminal/Command Prompt și rulează:
+
+node --version
+npm --version
+
+Ar trebui să vezi versiunile instalate. Exemplu:
+v18.19.0
+9.2.0
+
+====================================
+4. DESCĂRCAREA PROIECTULUI
+====================================
+
+🔗 Cu Git (recomandat):
+git clone https://github.com/kisslevente2003/evidenta-cheltuieli.git
+cd evidenta-cheltuieli
+
+📁 Fără Git:
+1. Descarcă arhiva ZIP de pe GitHub
+2. Extrage arhiva într-un folder
+3. Deschide Terminal/Command Prompt în acel folder
+
+====================================
+5. INSTALARE AUTOMATĂ (UȘOR)
+====================================
+
+🪟 WINDOWS:
+Dublu-click pe setup.bat
+(sau rulează în Command Prompt: setup.bat)
+
+🍎🐧 macOS/Linux:
+În Terminal rulează: chmod +x setup.sh && ./setup.sh
+
+Scriptul va face automat:
+- Verificare cerințe
+- Instalare dependințe
+- Configurare bază de date
+- Populare cu date inițiale
+
+====================================
+6. INSTALARE MANUALĂ
+====================================
+
+Dacă scriptul automat nu funcționează:
+
+1️⃣ Instalează dependințele:
+npm install
+
+2️⃣ Generează clientul pentru baza de date:
+npm run db:generate
+
+3️⃣ Creează baza de date:
+npm run db:push
+
+4️⃣ Populează cu date inițiale (opțional):
+npm run db:seed
+
+====================================
+7. PORNIREA APLICAȚIEI
+====================================
+
+🚀 Pentru dezvoltare:
+npm run dev
+
+🌐 Aplicația va fi disponibilă la:
+http://localhost:3000
+
+Browserul se va deschide automat.
+
+🏗️ Pentru producție (build):
+npm run build
+npm run preview
+
+====================================
+8. COMANDI UTILE
+====================================
+
+📊 Vizualizare bază de date:
+npm run db:studio
+
+🔧 Regenerare dependințe:
+npm install
+
+🧹 Curățare cache:
+npm cache clean --force
+
+🗃️ Reset bază de date:
+npm run db:push --force-reset
+npm run db:seed
+
+🔄 Update dependințe:
+npm update
+
+====================================
+9. DEPANARE PROBLEME
+====================================
+
+❌ "command not found: node"
+→ Node.js nu este instalat sau nu este în PATH
+→ Reinstalează Node.js
+
+❌ "permission denied" pe Linux/macOS
+→ Rulează cu sudo sau folosește nvm
+
+❌ "EACCES: permission denied" la npm install
+→ Windows: Rulează Command Prompt ca Administrator
+→ Linux/macOS: sudo npm install
+
+❌ Port 3000 ocupat
+→ Rulează pe alt port: npm run dev -- --port 3001
+
+❌ Baza de date nu se poate crea
+→ Verifică permisiunile în folder
+→ Rulează npm run db:push --force-reset
+
+❌ Dependințele nu se instalează
+→ Șterge folder node_modules: rm -rf node_modules
+→ Șterge package-lock.json: rm package-lock.json
+→ Rulează din nou: npm install
+
+====================================
+10. STRUCTURA PROIECTULUI
+====================================
+
+evidenta-cheltuieli/
+├── prisma/              # Baza de date
+│   ├── schema.prisma    # Schema bazei de date
+│   └── expenses.db      # Fișier SQLite (generat)
+├── components/          # Componente React
+├── styles/             # Stiluri CSS
+├── types/              # Tipuri TypeScript
+├── src/                # Cod sursă principal
+├── package.json        # Configurație npm
+└── README.md           # Documentație
+
+====================================
+11. FUNCȚIONALITĂȚI
+====================================
+
+✨ Gestionare cheltuieli:
+- Rate (CEC, BT, Casco)
+- Utilități (Gaze, Curent, Apă, etc.)
+- Servicii (Vodafone, Digi)
+- Streaming (Netflix, Prime, etc.)
+- Venituri
+
+📊 Rapoarte avansate:
+- Grafice interactive
+- Analiză pe categorii
+- Tendințe temporale
+- Export CSV
+
+💾 Bază de date locală:
+- SQLite pentru persistența datelor
+- Backup automat
+- Migrări automate
+
+====================================
+12. SUPORT
+====================================
+
+🐛 Pentru probleme tehnice:
+- Creează un Issue pe GitHub
+- Verifică documentația
+
+📧 Contact:
+- GitHub: kisslevente2003
+- Repository: evidenta-cheltuieli
+
+====================================
+
+Ultima actualizare: Ianuarie 2025
+Versiunea aplicației: 1.0.0
+
+Mult succes! 🚀

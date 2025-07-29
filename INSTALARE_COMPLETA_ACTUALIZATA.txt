@@ -1,0 +1,309 @@
+====================================
+   EVIDENȚA CHELTUIELILOR v1.0.0
+   Ghid Complet de Instalare
+   (Versiune LocalStorage)
+====================================
+
+📋 CUPRINS:
+1. Cerințe de sistem
+2. Instalare Node.js
+3. Descărcarea proiectului
+4. Instalare dependințe
+5. Pornirea aplicației
+6. Depanare probleme
+7. Comandi utile
+
+====================================
+1. CERINȚE DE SISTEM
+====================================
+
+Pentru a rula această aplicație ai nevoie de:
+
+✅ Sistem de operare:
+   - Windows 10/11
+   - macOS 10.15+
+   - Linux (Ubuntu 18.04+, Debian 10+, etc.)
+
+✅ Software necesar:
+   - Node.js versiunea 18.0 sau mai nouă
+   - npm (vine cu Node.js)
+   - Git (opțional, pentru clonare repository)
+   - Browser modern (Chrome 90+, Firefox 88+, Edge 90+, Safari 14+)
+
+✅ Hardware minim:
+   - 4 GB RAM
+   - 200 MB spațiu liber pe disk
+   - Procesor dual-core
+
+💾 STOCARE DATE:
+   - Datele se salvează în localStorage (browserul tău)
+   - Nu necesită bază de date externă
+   - Nu necesită server
+
+====================================
+2. INSTALARE NODE.JS
+====================================
+
+🪟 WINDOWS:
+1. Mergi la https://nodejs.org/
+2. Descarcă versiunea LTS (Long Term Support)
+3. Rulează installer-ul .msi
+4. Urmează instrucțiunile (acceptă toate setările default)
+5. Restart calculatorul
+
+🍎 macOS:
+Opțiunea 1 (Recommandată - cu Homebrew):
+1. Instalează Homebrew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2. Instalează Node.js: brew install node
+
+Opțiunea 2 (Direct):
+1. Mergi la https://nodejs.org/
+2. Descarcă installer-ul pentru macOS
+3. Rulează fișierul .pkg
+
+🐧 LINUX:
+Ubuntu/Debian:
+sudo apt update
+sudo apt install nodejs npm
+
+CentOS/RHEL/Fedora:
+sudo dnf install nodejs npm
+
+Arch Linux:
+sudo pacman -S nodejs npm
+
+====================================
+3. VERIFICARE INSTALARE
+====================================
+
+Deschide Terminal/Command Prompt și rulează:
+
+node --version
+npm --version
+
+Ar trebui să vezi versiunile instalate. Exemplu:
+v18.19.0
+9.2.0
+
+====================================
+4. DESCĂRCAREA PROIECTULUI
+====================================
+
+🔗 Cu Git (recomandat):
+git clone https://github.com/kisslevente2003/evidenta-cheltuieli.git
+cd evidenta-cheltuieli
+
+📁 Fără Git:
+1. Descarcă arhiva ZIP de pe GitHub
+2. Extrage arhiva într-un folder
+3. Deschide Terminal/Command Prompt în acel folder
+
+====================================
+5. INSTALARE AUTOMATĂ (UȘOR)
+====================================
+
+🪟 WINDOWS:
+Dublu-click pe setup.bat
+(sau rulează în Command Prompt: setup.bat)
+
+🍎🐧 macOS/Linux:
+În Terminal rulează: chmod +x setup.sh && ./setup.sh
+
+Scriptul va face automat:
+- Verificare cerințe
+- Instalare dependințe
+- Verificare versiuni
+
+====================================
+6. INSTALARE MANUALĂ
+====================================
+
+Dacă scriptul automat nu funcționează:
+
+1️⃣ Instalează dependințele:
+npm install
+
+Și atât! Nu mai sunt necesare configurări pentru baza de date.
+
+====================================
+7. PORNIREA APLICAȚIEI
+====================================
+
+🚀 Pentru dezvoltare:
+npm run dev
+
+🌐 Aplicația va fi disponibilă la:
+http://localhost:3000
+
+Browserul se va deschide automat.
+
+🏗️ Pentru producție (build):
+npm run build
+npm run preview
+
+====================================
+8. COMANDI UTILE
+====================================
+
+🔧 Regenerare dependințe:
+npm install
+
+🧹 Curățare cache:
+npm cache clean --force
+
+🔄 Update dependințe:
+npm update
+
+📁 Build pentru producție:
+npm run build
+
+🔍 Preview build:
+npm run preview
+
+====================================
+9. GESTIONARE DATE
+====================================
+
+💾 SALVARE AUTOMATĂ:
+- Toate datele se salvează automat în localStorage
+- Nu ai nevoie să faci backup manual
+- Datele persistă între sesiuni
+
+🗂️ EXPORT/IMPORT (în curând):
+- Export date în format JSON
+- Import date din backup
+- Resetare completă date
+
+⚠️ IMPORTANT:
+- Datele sunt legate de browser-ul specific
+- Dacă ștergi cookies/date browser, se pierd datele
+- Pentru siguranță, poți face periodic backup din meniul aplicației
+
+====================================
+10. DEPANARE PROBLEME
+====================================
+
+❌ "command not found: node"
+→ Node.js nu este instalat sau nu este în PATH
+→ Reinstalează Node.js
+
+❌ "permission denied" pe Linux/macOS
+→ Rulează cu sudo sau folosește nvm
+
+❌ "EACCES: permission denied" la npm install
+→ Windows: Rulează Command Prompt ca Administrator
+→ Linux/macOS: sudo npm install
+
+❌ Port 3000 ocupat
+→ Rulează pe alt port: npm run dev -- --port 3001
+
+❌ Dependințele nu se instalează
+→ Șterge folder node_modules: rm -rf node_modules
+→ Șterge package-lock.json: rm package-lock.json
+→ Rulează din nou: npm install
+
+❌ Aplicația nu pornește
+→ Verifică versiunea Node.js: node --version
+→ Trebuie să fie 18.0 sau mai nouă
+
+❌ Datele nu se salvează
+→ Verifică dacă localStorage este activat în browser
+→ Verifică dacă ai destul spațiu în browser
+→ Nu folosi modul incognito pentru utilizare permanentă
+
+====================================
+11. STRUCTURA PROIECTULUI (SIMPLIFICATĂ)
+====================================
+
+evidenta-cheltuieli/
+├── components/          # Componente React
+├── styles/             # Stiluri CSS
+├── types/              # Tipuri TypeScript
+├── src/                # Cod sursă principal
+│   └── lib/
+│       └── clientDatabase.ts  # Manager localStorage
+├── package.json        # Configurație npm
+└── README.md           # Documentație
+
+====================================
+12. FUNCȚIONALITĂȚI
+====================================
+
+✨ Gestionare cheltuieli:
+- Rate (CEC, BT, Casco)
+- Utilități (Gaze, Curent, Apă, etc.)
+- Servicii (Vodafone, Digi)
+- Streaming (Netflix, Prime, etc.)
+- Venituri
+
+📊 Rapoarte avansate:
+- Grafice interactive
+- Analiză pe categorii
+- Tendințe temporale
+- Export CSV
+
+💾 Stocare locală:
+- localStorage pentru persistența datelor
+- Backup automat
+- Nu necesită server
+
+====================================
+13. AVANTAJE VERSIUNE LOCALSTORAGE
+====================================
+
+✅ BENEFICII:
+- Nu necesită bază de date externă
+- Funcționează 100% offline
+- Instalare simplă, fără configurări complexe
+- Pornire instantanee
+- Nu necesită server
+- Date private (nu pleacă din browser)
+
+⚠️ LIMITĂRI:
+- Datele sunt legate de un browser specific
+- Capacitate limitată (~5-10 MB în localStorage)
+- Nu se sincronizează între dispozitive
+- Se pierd la ștergerea datelor browser
+
+====================================
+14. BROWSER SUPPORT
+====================================
+
+✅ SUPORTAT COMPLET:
+- Google Chrome 90+
+- Mozilla Firefox 88+
+- Microsoft Edge 90+
+- Safari 14+
+
+⚠️ FUNCȚIONAL DAR LIMITAT:
+- Internet Explorer (nu e recomandat)
+- Browsere foarte vechi
+
+====================================
+15. SUPORT
+====================================
+
+🐛 Pentru probleme tehnice:
+- Creează un Issue pe GitHub
+- Verifică documentația
+
+📧 Contact:
+- GitHub: kisslevente2003
+- Repository: evidenta-cheltuieli
+
+====================================
+
+🎯 REZUMAT PAȘI RAPIZI:
+
+1. Instalează Node.js de pe nodejs.org
+2. Descarcă proiectul de pe GitHub
+3. Rulează setup.bat (Windows) sau setup.sh (Linux/Mac)
+4. Deschide http://localhost:3000
+5. Începe să gestionezi cheltuielile!
+
+====================================
+
+Ultima actualizare: Ianuarie 2025
+Versiunea aplicației: 1.0.0 (localStorage)
+
+Mult succes! 🚀

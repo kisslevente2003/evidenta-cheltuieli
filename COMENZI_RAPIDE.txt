@@ -1,0 +1,155 @@
+================================================================================
+                         COMENZI RAPIDE DE UTILIZARE
+================================================================================
+
+🚀 INSTALARE RAPIDĂ (pentru utilizatori experimentați)
+================================================================================
+
+1. Instalează Node.js 18+ de la: https://nodejs.org/
+2. Extrage arhiva în directorul dorit
+3. Deschide terminal în directorul aplicației
+4. Rulează comenzile:
+
+npm install
+npx prisma generate
+npx prisma db push  
+npx prisma db seed
+npm run dev
+
+5. Deschide http://localhost:5173
+
+================================================================================
+💻 COMENZI DE DEZVOLTARE
+================================================================================
+
+# Instalare dependințe
+npm install
+
+# Configurare bază de date
+npx prisma generate              # Generează clientul Prisma
+npx prisma db push              # Creează/actualizează schema
+npx prisma db seed              # Populează cu date inițiale
+npx prisma studio               # Interfață vizuală bază de date
+
+# Rulare aplicație
+npm run dev                     # Dezvoltare (port 5173)
+npm run build                   # Compilare pentru producție
+npm run preview                 # Previzualizare versiune compilată
+
+# Dezvoltare
+npm run lint                    # Verifică codul pentru erori
+
+================================================================================
+🗄️ GESTIONAREA BAZEI DE DATE
+================================================================================
+
+# Vizualizare date
+npx prisma studio               # Interfață web pentru baza de date
+
+# Reset complet
+rm -rf prisma/database.db       # Șterge baza de date
+npx prisma db push              # Recreează schema
+npx prisma db seed              # Repopulează cu date
+
+# Backup
+cp prisma/database.db backup_$(date +%Y%m%d).db
+
+# Restore
+cp backup_YYYYMMDD.db prisma/database.db
+
+================================================================================
+🔧 REZOLVAREA PROBLEMELOR RAPIDE
+================================================================================
+
+# Eroare "Prisma Client not generated"
+npx prisma generate
+
+# Eroare "Database does not exist"
+npx prisma db push
+
+# Aplicația nu pornește
+rm -rf node_modules package-lock.json
+npm install
+
+# Port ocupat
+pkill -f "vite"                 # Linux/Mac
+# Pe Windows: închide procesul din Task Manager
+
+# Reset total
+rm -rf node_modules prisma/database.db package-lock.json
+npm install
+npx prisma generate
+npx prisma db push
+npx prisma db seed
+
+================================================================================
+📊 COMENZI PENTRU PRODUCȚIE
+================================================================================
+
+# Build pentru producție
+npm run build
+
+# Previzualizare build
+npm run preview
+
+# Deploy static (după build)
+# Fișierele compilate vor fi în directorul "dist/"
+
+================================================================================
+🎯 COMENZI UTILE PENTRU DEBUG
+================================================================================
+
+# Verifică versiunile
+node --version
+npm --version
+
+# Verifică procesele care rulează pe portul 5173
+lsof -i :5173                   # Linux/Mac
+netstat -ano | findstr :5173    # Windows
+
+# Șterge cache npm
+npm cache clean --force
+
+# Reinstalare completă
+rm -rf node_modules package-lock.json
+npm install
+
+================================================================================
+📱 TESTAREA PE DISPOZITIVE MOBILE
+================================================================================
+
+# După `npm run dev`, aplicația va fi disponibilă și pe:
+# http://[IP-ul-tau-local]:5173
+# 
+# Pentru a găsi IP-ul local:
+ipconfig                        # Windows
+ifconfig                        # Linux/Mac
+
+================================================================================
+🛠️ COMENZI PENTRU DEZVOLTATORI
+================================================================================
+
+# Actualizare dependințe
+npm update
+
+# Verificare vulnerabilități
+npm audit
+npm audit fix
+
+# Instalare dependință nouă
+npm install nume-pachet
+
+# Instalare dependință de dezvoltare
+npm install -D nume-pachet
+
+================================================================================
+💡 SFATURI RAPIDE
+================================================================================
+
+- Aplicația salvează automat datele în SQLite
+- Pentru backup rapid: copiază prisma/database.db
+- Pentru reset rapid: șterge prisma/database.db și rulează npx prisma db seed
+- Pentru debug bază de date: npx prisma studio
+- Pentru probleme de port: schimbă portul din vite.config.ts
+
+================================================================================

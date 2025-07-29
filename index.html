@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aplicație pentru evidența cheltuielilor lunare cu rapoarte avansate și bază de date locală" />
+    <meta name="keywords" content="cheltuieli, buget, evidență, rapoarte financiare, utilități, rate" />
+    <meta name="author" content="Evidența Cheltuieli App" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Evidența Cheltuielilor - Gestionare Buget Personal" />
+    <meta property="og:description" content="Aplicație completă pentru gestionarea cheltuielilor lunare cu rapoarte detaliate și analiză financiară" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Evidența Cheltuielilor - Gestionare Buget Personal" />
+    <meta name="twitter:description" content="Aplicație completă pentru gestionarea cheltuielilor lunare cu rapoarte detaliate și analiză financiară" />
+    
+    <title>Evidența Cheltuielilor - Gestionare Buget Personal</title>
+    
+    <style>
+      /* Loading screen styles */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        font-size: 18px;
+        color: #333;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        .loading-screen {
+          background: #0a0a0a;
+        }
+        
+        .loading-text {
+          color: #ffffff;
+        }
+        
+        .loading-spinner {
+          border: 5px solid #333;
+          border-top: 5px solid #3498db;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Se încarcă aplicația...</div>
+    </div>
+    
+    <!-- App Root -->
+    <div id="root"></div>
+    
+    <!-- App Script -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Remove loading screen when app loads -->
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+              loadingScreen.remove();
+            }, 500);
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

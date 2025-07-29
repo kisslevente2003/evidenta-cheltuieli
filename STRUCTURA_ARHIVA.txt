@@ -1,0 +1,241 @@
+====================================
+   EVIDENȚA CHELTUIELILOR
+   Structura Completă a Arhivei
+====================================
+
+📁 evidenta-cheltuieli-v1.0.0/
+│
+├── 📋 FIȘIERE PRINCIPALE
+│   ├── README.md                    # Documentația principală
+│   ├── INSTALARE_COMPLETA.txt       # Ghid pas cu pas pentru începători
+│   ├── DOWNLOAD_LINKS.txt           # Link-uri oficiale de descărcare
+│   ├── STRUCTURA_ARHIVA.txt         # Acest fișier
+│   ├── package.json                 # Dependințele și script-urile npm
+│   ├── App.tsx                      # Componenta principală React
+│   └── index.html                   # Pagina HTML principală
+│
+├── 🔧 CONFIGURARE
+│   ├── .env                         # Variabile de mediu
+│   ├── .gitignore                   # Fișiere ignorate de Git
+│   ├── tsconfig.json                # Configurația TypeScript
+│   ├── tsconfig.node.json           # TypeScript pentru Node.js
+│   ├── vite.config.ts               # Configurația Vite build tool
+│   ├── setup.bat                    # Script de instalare Windows
+│   └── setup.sh                     # Script de instalare Linux/macOS
+│
+├── 💾 BAZA DE DATE
+│   └── 📂 prisma/
+│       ├── schema.prisma            # Schema bazei de date SQLite
+│       ├── seed.ts                  # Script pentru popularea cu date
+│       └── [expenses.db]            # Fișier SQLite (se generează)
+│
+├── ⚛️ COMPONENTE REACT
+│   └── 📂 components/
+│       ├── AddServiceModal.tsx      # Modal adăugare servicii noi
+│       ├── CompanyLogo.tsx          # Componenta pentru logo-uri
+│       ├── DeleteServiceModal.tsx   # Modal confirmare ștergere
+│       ├── ExpenseCard.tsx          # Card-uri pentru cheltuieli
+│       ├── FixedExpenseModal.tsx    # Modal cheltuieli fixe
+│       ├── InstallmentExpenseModal.tsx # Modal rate cu plăți
+│       ├── MonthCard.tsx            # Card-uri pentru luni
+│       ├── MonthExpenses.tsx        # Pagina cheltuielilor pe lună
+│       ├── ReportsView.tsx          # Pagina rapoartelor avansate
+│       ├── UtilityExpenseModal.tsx  # Modal pentru utilități
+│       ├── YearMonthsView.tsx       # Vizualizarea lunilor unui an
+│       ├── YearSelector.tsx         # Selector de ani
+│       │
+│       ├── 📂 figma/
+│       │   └── ImageWithFallback.tsx # Componenta pentru imagini
+│       │
+│       └── 📂 ui/ (54 componente Shadcn/UI)
+│           ├── accordion.tsx         # Acordeon pliabil
+│           ├── alert-dialog.tsx      # Dialog-uri de alertă
+│           ├── alert.tsx             # Alerte informative
+│           ├── aspect-ratio.tsx      # Control aspect ratio
+│           ├── avatar.tsx            # Avatar utilizatori
+│           ├── badge.tsx             # Badge-uri și etichete
+│           ├── breadcrumb.tsx        # Breadcrumb navigare
+│           ├── button.tsx            # Butoane interactive
+│           ├── calendar.tsx          # Calendar date picker
+│           ├── card.tsx              # Card-uri de conținut
+│           ├── carousel.tsx          # Carousel imagini
+│           ├── chart.tsx             # Wrapper pentru grafice
+│           ├── checkbox.tsx          # Checkbox-uri
+│           ├── collapsible.tsx       # Conținut pliabil
+│           ├── command.tsx           # Command pallete
+│           ├── context-menu.tsx      # Meniuri contextuale
+│           ├── dialog.tsx            # Dialog-uri modale
+│           ├── drawer.tsx            # Drawer lateral
+│           ├── dropdown-menu.tsx     # Meniuri dropdown
+│           ├── form.tsx              # Componente form cu validare
+│           ├── hover-card.tsx        # Card-uri la hover
+│           ├── input-otp.tsx         # Input pentru coduri OTP
+│           ├── input.tsx             # Input-uri text
+│           ├── label.tsx             # Label-uri pentru form-uri
+│           ├── menubar.tsx           # Meniu bar aplicație
+│           ├── navigation-menu.tsx   # Meniuri de navigare
+│           ├── pagination.tsx        # Paginare rezultate
+│           ├── popover.tsx           # Popover-uri informative
+│           ├── progress.tsx          # Bare de progres
+│           ├── radio-group.tsx       # Grupuri radio button
+│           ├── resizable.tsx         # Panouri redimensionabile
+│           ├── scroll-area.tsx       # Zone cu scroll custom
+│           ├── select.tsx            # Dropdown selectare
+│           ├── separator.tsx         # Separatoare vizuale
+│           ├── sheet.tsx             # Sheet-uri laterale
+│           ├── sidebar.tsx           # Sidebar navigare
+│           ├── skeleton.tsx          # Loading skeletons
+│           ├── slider.tsx            # Slider-uri valori
+│           ├── sonner.tsx            # Toast notifications
+│           ├── switch.tsx            # Switch-uri on/off
+│           ├── table.tsx             # Tabele de date
+│           ├── tabs.tsx              # Tab-uri pentru organizare
+│           ├── textarea.tsx          # Textarea pentru text lung
+│           ├── toggle-group.tsx      # Grupuri toggle
+│           ├── toggle.tsx            # Toggle buttons
+│           ├── tooltip.tsx           # Tooltip-uri
+│           ├── use-mobile.ts         # Hook pentru detecția mobile
+│           └── utils.ts              # Utilități pentru styling
+│
+├── 🎨 STILURI
+│   └── 📂 styles/
+│       └── globals.css              # CSS global cu Tailwind și custom
+│
+├── 🔤 TIPURI TYPESCRIPT
+│   └── 📂 types/
+│       └── expense.ts               # Definițiile de tipuri pentru cheltuieli
+│
+├── 📦 COD SURSĂ
+│   └── 📂 src/
+│       ├── main.tsx                 # Entry point aplicație React
+│       ├── App.tsx                  # Link către App.tsx principal
+│       │
+│       ├── 📂 lib/
+│       │   └── database.ts          # Manager pentru baza de date SQLite
+│       │
+│       └── 📂 components/
+│           └── 📂 ui/
+│               └── utils.ts         # Utilități pentru componente
+│
+└── 📄 DOCUMENTAȚIE ȘI ALTE FIȘIERE
+    ├── CHANGELOG.md                 # Istoricul schimbărilor
+    ├── Attributions.md              # Atribuiri și credite
+    ├── COMENZI_RAPIDE.txt           # Lista comenzilor npm utile
+    ├── README_DATABASE.md           # Documentația bazei de date
+    ├── SETUP_INSTRUCTIONS.md        # Instrucțiuni detaliate setup
+    ├── HOSTING_GITHUB.txt           # Ghid pentru hosting pe GitHub
+    └── guidelines/
+        └── Guidelines.md            # Ghiduri pentru dezvoltare
+
+====================================
+📊 STATISTICI ARHIVĂ
+====================================
+
+📁 Total foldere: 8
+📄 Total fișiere: ~80
+💾 Dimensiune estimată: 15-20 MB (cu node_modules: ~200-300 MB)
+⚡ Fișiere TypeScript: 65+
+🎨 Fișiere CSS: 1 (globals.css)
+🗃️ Fișiere configurare: 10+
+
+====================================
+🔧 FIȘIERE GENERATE LA INSTALARE
+====================================
+
+Următoarele fișiere se vor genera automat:
+
+📂 node_modules/               # Dependințele npm (300+ MB)
+📂 prisma/expenses.db          # Baza de date SQLite
+📂 dist/                       # Build pentru producție (npm run build)
+📂 .prisma/                    # Client generat Prisma
+📄 package-lock.json          # Lock pentru versiunile exacte
+
+====================================
+🚀 INSTRUCȚIUNI INSTALARE
+====================================
+
+1️⃣ EXTRAGERE:
+   - Extrage arhiva în folderul dorit
+   - Pe Windows: Click dreapta → Extract Here
+   - Pe macOS: Dublu-click pe arhivă
+   - Pe Linux: unzip evidenta-cheltuieli.zip
+
+2️⃣ INSTALARE RAPIDĂ:
+   - Windows: Dublu-click pe setup.bat
+   - macOS/Linux: Rulează ./setup.sh în terminal
+
+3️⃣ INSTALARE MANUALĂ:
+   - npm install
+   - npm run db:generate  
+   - npm run db:push
+   - npm run db:seed
+
+4️⃣ PORNIRE:
+   - npm run dev
+   - Deschide http://localhost:3000
+
+====================================
+💡 SFATURI UTILE
+====================================
+
+✅ CERINȚE MINIME:
+   - Node.js 18.0+ (verifică cu: node --version)
+   - npm 8.0+ (verifică cu: npm --version)
+   - 4 GB RAM disponibilă
+   - 500 MB spațiu liber
+
+⚡ OPTIMIZĂRI:
+   - Închide alte aplicații consumatoare de RAM
+   - Folosește SSD pentru performanță mai bună
+   - Dezactivează antivirus temporar la instalare
+
+🔧 DEBUGGING:
+   - Verifică log-urile din terminal pentru erori
+   - Șterge node_modules și reinstalează dacă ai probleme
+   - Folosește npm run db:studio pentru vizualizarea bazei de date
+
+🌐 BROWSER SUPPORT:
+   - Chrome 90+ (recomandat)
+   - Firefox 88+
+   - Edge 90+  
+   - Safari 14+
+
+====================================
+📞 SUPPORT
+====================================
+
+🐛 Pentru probleme tehnice:
+   - Creează issue pe GitHub
+   - Verifică documentația README.md
+   - Caută în issues existente
+
+💬 Pentru întrebări generale:
+   - GitHub Discussions
+   - Email prin GitHub profile
+
+📋 Pentru raportarea bug-urilor:
+   - Descrie pașii de reproducere
+   - Include versiunea Node.js și npm
+   - Include screenshot-uri dacă e posibil
+
+====================================
+🏆 CONTRIBUȚII
+====================================
+
+Pentru a contribui la proiect:
+
+1. Fork repository-ul pe GitHub
+2. Creează branch pentru feature nou
+3. Fă modificările și testează local
+4. Creează Pull Request cu descriere detaliată
+5. Așteaptă review și merge
+
+Toate contribuțiile sunt binevenite! 🎉
+
+====================================
+
+Ultima actualizare: Ianuarie 2025
+Versiune arhivă: 1.0.0
+Pregătit de: kisslevente2003
+
+Mult succes cu folosirea aplicației! 🚀
